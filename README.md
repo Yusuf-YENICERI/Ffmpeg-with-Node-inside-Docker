@@ -24,7 +24,7 @@ Here is the steps you need to do:
 
 5- Now, you should have a file called as package-lock.json.
 
-7- Include this lines inside your main js file:
+7- Include this lines inside your main js file(the file you write your code):
 
 var ffmpeg_static = require('ffmpeg-static');
 
@@ -57,3 +57,50 @@ WORKDIR /home/asd/Desktop/app -> this is an example path
 12- When build finishes, run "sudo docker container run -it --name testing -p 49160:4444 yusuf/node-with-ffmpeg"
 
 13- Access the application with localhost:49160
+
+
+Türkçe'de stepler:
+
+1- app adlı bir dizin oluşturun.
+
+2- Tüm dosyalarınızı package.json vb. İle birlikte app dizinine koyun.
+
+3- "ffmpeg-static": "^ 2.3.0" ı package.json içindeki dependencies'e ekleyin
+
+4- Ardından app dizini içinde "npm install" komutunu çalıştırın.
+
+5- Artık package-lock.json adında bir dosyanız olmalı.
+
+7- Bu satırları main js dosyanıza ekleyin(kodlarınızı yazdığınız dosya, app.js gibi):
+
+var ffmpeg_static = required ('ffmpeg-static');
+
+console.log ("ffmpeg yolu:" + ffmpeg_static.path);
+
+8- -> "node app.js" gibi "node sizinDosyaniz.js" komutunu çalıştırın
+
+9- ffmpeg yolunu şu şekilde almalısınız -> "ffmpeg yolu: ../..asdlaslkdjalksjd"
+
+10- Daha sonra yolu kopyalayın ve ffmpeg dosyasından yeni bir nesne oluşturduktan sonra bunu yapıştırın.
+
+Misal:
+
+var proc = new ffmpeg ({...})
+
+proc.setFfmpegPath ("ffmpeg'e giden yolunuz") -> bunu ekleyin
+
+10- Dockerfile'ı oluşturmanın zamanı geldi, ancak oluşturmadan önce bu deponun içindeki "Dockerfile" dosyasını indirin ve app dizini yolunuzu dockerfile'a koyun:
+
+Değişiklik
+
+WORKDIR {sizin-path'iniz}
+
+-e
+
+WORKDIR /home/asd/Desktop/app -> bu örnek bir yoldur
+
+11- "Dockerfile" dosyasını oluşturun, komut: "sudo docker build -t yusuf / node-with-ffmpeg."
+
+12- Derleme tamamlandığında, "sudo docker container run -it --name testing -p 49160: 4444 yusuf / node-with-ffmpeg" komutunu çalıştırın.
+
+13- Uygulamaya erişmek için: localhost:49160
