@@ -42,7 +42,7 @@ var proc = new ffmpeg({...})
 
 proc.setFfmpegPath("your path to ffmpeg") -> include this
 
-10- It is time to build the dockerfile, but before building, download the "Dockerfile" inside this repository and put your app directory path into dockerfile:
+11- It is time to build the dockerfile, but before building, download the "Dockerfile" inside this repository and put your app directory path into dockerfile:
 
 Change
 
@@ -52,11 +52,11 @@ to
 
 WORKDIR /home/asd/Desktop/app -> this is an example path
 
-11- Build the "Dockerfile", the command is: "sudo docker build -t yusuf/node-with-ffmpeg ."
+12- Build the "Dockerfile", the command is: "sudo docker build -t yusuf/node-with-ffmpeg ."
 
-12- When build finishes, run "sudo docker container run -it --name testing -p 49160:4444 yusuf/node-with-ffmpeg"
+13- When build finishes, run "sudo docker container run -it --name testing -p 49160:4444 yusuf/node-with-ffmpeg"
 
-13- Access the application with localhost:49160
+14- Access the application with localhost:49160
 
 
 Türkçe'de stepler:
@@ -89,18 +89,18 @@ var proc = new ffmpeg ({...})
 
 proc.setFfmpegPath ("ffmpeg'e giden yolunuz") -> bunu ekleyin
 
-10- Dockerfile'ı oluşturmanın zamanı geldi, ancak oluşturmadan önce bu deponun içindeki "Dockerfile" dosyasını indirin ve app dizini yolunuzu dockerfile'a koyun:
+11- Dockerfile'ı oluşturmanın zamanı geldi, ancak oluşturmadan önce bu deponun içindeki "Dockerfile" dosyasını indirin ve app dizini yolunuzu dockerfile'a koyun:
 
-Değişiklik
+Bunu
 
 WORKDIR {sizin-path'iniz}
 
--e
+Buna değiştirin
 
 WORKDIR /home/asd/Desktop/app -> bu örnek bir yoldur
 
-11- "Dockerfile" dosyasını oluşturun, komut: "sudo docker build -t yusuf / node-with-ffmpeg."
+12- "Dockerfile" dosyasını oluşturun, komut: "sudo docker build -t yusuf/node-with-ffmpeg."
 
-12- Derleme tamamlandığında, "sudo docker container run -it --name testing -p 49160: 4444 yusuf / node-with-ffmpeg" komutunu çalıştırın.
+13- Derleme tamamlandığında, "sudo docker container run -it --name testing -p 49160:4444 yusuf/node-with-ffmpeg" komutunu çalıştırın.
 
-13- Uygulamaya erişmek için: localhost:49160
+14- Uygulamaya erişmek için: localhost:49160
