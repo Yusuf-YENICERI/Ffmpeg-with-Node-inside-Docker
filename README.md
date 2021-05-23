@@ -26,9 +26,9 @@ Here is the steps you need to do:
 
 7- Include this lines inside your main js file:
 
-var ffmpeg = require('ffmpeg-static');
+var ffmpeg_static = require('ffmpeg-static');
 
-console.log("path to ffmpeg: " + ffmpeg.path);
+console.log("path to ffmpeg: " + ffmpeg_static.path);
 
 8- Run "node yourMainFile.js" such as -> "node app.js"
 
