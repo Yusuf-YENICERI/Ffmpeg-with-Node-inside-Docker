@@ -16,7 +16,7 @@ Here is the steps you need to do:
 
 1- Make a directory called app.
 
-2- Put your all source files into app directory alongside with package.json etc.
+2- Put your all files into app directory alongside with package.json etc.
 
 3- Add this "ffmpeg-static": "^2.3.0" into dependencies in package.json
 
