@@ -55,3 +55,5 @@ WORKDIR /home/asd/Desktop/app -> this is an example path
 11- Build the "Dockerfile", the command is: "sudo docker build -t yusuf/node-with-ffmpeg ."
 
 12- When build finishes, run "sudo docker container run -it --name testing -p 49160:4444 yusuf/node-with-ffmpeg"
+
+13- Access the application with localhost:49160
