@@ -50,7 +50,7 @@ WORKDIR {your-path}
 
 to
 
-WORKDIR /home/asd/Desktop/app
+WORKDIR /home/asd/Desktop/app -> this is an example path
 
 11- Build the "Dockerfile", the command is: "sudo docker build -t yusuf/node-with-ffmpeg ."
 
