@@ -42,6 +42,16 @@ var proc = new ffmpeg({...})
 
 proc.setFfmpegPath("your path to ffmpeg") -> include this
 
-11- Build the dockerfile inside the repository called as "Dockerfile", the command is: "sudo docker build -t yusuf/node-with-ffmpeg ."
+10- It is time to build the dockerfile, but before building, download the "Dockerfile" inside this repository and put your app directory path into dockerfile:
+
+Change
+
+WORKDIR {your-path}
+
+to
+
+WORKDIR /home/asd/Desktop/app
+
+11- Build the "Dockerfile", the command is: "sudo docker build -t yusuf/node-with-ffmpeg ."
 
 12- When build finishes, run "sudo docker container run -it --name testing -p 49160:4444 yusuf/node-with-ffmpeg"
